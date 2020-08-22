@@ -73,7 +73,7 @@ function getFlagInfo(level, z, x, y){
       return {message: ["Encuentra la presentacion de hoy.", "Muevete con el teclado."],
               finished: false};
     } else {
-      return {message:["Felicitaciones!", "Navega a http://interactiva.xyz/clase1"], finished: false };
+      return {message:["Salta con la tecla ESPACIO", ""], finished: true };
     }
   }
 
