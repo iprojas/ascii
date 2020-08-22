@@ -73,7 +73,7 @@ function getFlagInfo(level, z, x, y){
       return {message: ["Encuentra la presentacion de hoy.", "Muevete con el teclado."],
               finished: false};
     } else {
-      return {message:["Salta con la tecla ESPACIO", ""], finished: true };
+      return {message:["Felicitaciones", "Navega a https://slides.com/ignaciorojas/clase1/live"], finished: false };
     }
   }
 
