@@ -81,19 +81,19 @@ function getFlagInfo(level, z, x, y){
     if (Math.abs(x) < 100 && Math.abs(y) < 100) {
       let seed = Math.abs((x + y)%3);
       if (seed == 0) {
-        return {message: ["You'll have to look", "a little further", "than this!"],
+        return {message: ["Tienes que buscar", "un poco más", "que esto!"],
               finished: false};
       }
       if (seed == 1) {
-        return {message: ["I hear you need", "to go far out..."],
+        return {message: ["Me han dicho que ", "tienes que ir más lejos...."],
               finished: false};
       }
       if (seed == 2) {
-        return {message: ["Not here!"],
+        return {message: ["No acá!"],
               finished: false};
       }
     } else {
-      return {message: ["You made it!"],
+      return {message: ["Felicitaciones!"],
               finished: true};
     }
   }
