@@ -70,10 +70,10 @@ var offsetY = 20;
 function getFlagInfo(level, z, x, y){
   if (level.map_id === INTRO) {
     if (x < 40) {
-      return {message: ["Encuentra la presentacion de hoy.", "Muevete con el teclado."],
+      return {message: ["La segunda regla del desafío secreto es:", "Muevete con el teclado."],
               finished: false};
     } else {
-      return {message:["Felicitaciones!", "Navega a http://interactiva.xyz/clase1"], finished: false };
+      return {message:["Salta con ESPACIO", ""], finished: true };
     }
   }
 
@@ -81,19 +81,19 @@ function getFlagInfo(level, z, x, y){
     if (Math.abs(x) < 100 && Math.abs(y) < 100) {
       let seed = Math.abs((x + y)%3);
       if (seed == 0) {
-        return {message: ["You'll have to look", "a little further", "than this!"],
+        return {message: ["Acá no pasa nada"],
               finished: false};
       }
       if (seed == 1) {
-        return {message: ["I hear you need", "to go far out..."],
+        return {message: ["Esto es solo", "una distracción..."],
               finished: false};
       }
       if (seed == 2) {
-        return {message: ["Not here!"],
+        return {message: ["Tienes que buscar a otro nivel."],
               finished: false};
       }
     } else {
-      return {message: ["You made it!"],
+      return {message: ["Busca la fuente!"],
               finished: true};
     }
   }
@@ -113,12 +113,12 @@ function getFlagInfo(level, z, x, y){
     let score = level.figureEightState[0] + level.figureEightState[1] + level.figureEightState[2];
 
     if (score >= 3) {
-      return {message:["You made it!", "( "+ score + " / 3)"], finished:true};
+      return {message:["Solo un paso más!", "( "+ score + " / 3)"], finished:true};
     }
 
-    return {message:["Keep going!", "(" + score + " / 3)"], finished:false};
+    return {message:["Un poco más!", "(" + score + " / 3)"], finished:false};
   }
-  return {message:["Finish!"], finished:true}
+  return {message:["Felicitaciones, no ganaste nada!"], finished:true}
 };
 
 // Modify buffer sizes and change rendering parameters according to the provided dimensions.
