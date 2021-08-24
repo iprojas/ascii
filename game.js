@@ -70,7 +70,7 @@ var offsetY = 20;
 function getFlagInfo(level, z, x, y){
   if (level.map_id === INTRO) {
     if (x < 40) {
-      return {message: ["La segunda regla del desafío secreto es:", "Muevete con el teclado."],
+      return {message: ["Encuentra el camino:", "Muevete con el teclado."],
               finished: false};
     } else {
       return {message:["Salta con ESPACIO", ""], finished: true };
